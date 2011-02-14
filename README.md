@@ -59,6 +59,9 @@ Usage
   curl http://localhost:4567/describe?location=http://localhost:4567/test.txt
 
 * Use the associated form to upload a file to the description service via HTTP POST method.
+  For example, if using curl
+  curl -F "document=@files/00001.pdf" -F "extension=pdf"  http://localhost:4567/description 
+	
 
 Documentation
 -------------
