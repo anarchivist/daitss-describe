@@ -2,8 +2,8 @@
 require 'rubygems'
 require 'rjb'
 require 'singleton'
-require 'DescribeLogger'
-require 'config'
+require 'lib/DescribeLogger'
+require 'lib/config'
 
 class RDroid
   include Singleton

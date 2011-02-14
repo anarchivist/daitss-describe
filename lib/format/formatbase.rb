@@ -1,12 +1,12 @@
 require 'xml'
- require 'libxslt'
-require 'structures'
-require 'DescribeLogger'
+require 'libxslt'
+require 'lib/structures'
+require 'lib/DescribeLogger'
 require 'fileutils'
 require 'rjb'
-require 'config'
+require 'lib/config'
 require 'set'
-require 'jar'
+require 'lib/jar'
 
 class FormatBase
   NAMESPACES = {

@@ -1,4 +1,4 @@
-require 'format/formatbase.rb'
+require 'lib/format/formatbase.rb'
 
 class Audio < FormatBase
   protected

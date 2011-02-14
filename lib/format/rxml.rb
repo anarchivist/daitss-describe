@@ -1,4 +1,4 @@
-require 'format/formatbase'
+require 'lib/format/formatbase'
 
 class RXML < FormatBase
 

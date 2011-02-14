@@ -1,4 +1,4 @@
-require 'format/formatbase'
+require 'lib/format/formatbase'
 require 'erb'
 class PDF < FormatBase
 

@@ -1,4 +1,4 @@
-require 'format/formatbase'
+require 'lib/format/formatbase'
 
 class UTF8 < FormatBase
 

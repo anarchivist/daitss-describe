@@ -1,12 +1,12 @@
 #!/usr/local/env ruby
 require 'rubygems' 
-require 'structures'
-require 'registry/format2validator'
-require 'registry/pronom_format'
-require 'registry/validator'
-require 'registry/registry'
-require 'DescribeLogger'
-require 'config'
+require 'lib/structures'
+require 'lib/registry/format2validator'
+require 'lib/registry/pronom_format'
+require 'lib/registry/validator'
+require 'lib/registry/registry'
+require 'lib/DescribeLogger'
+require 'lib/config'
 
 class Result
   attr_accessor :fileObject
@@ -42,7 +42,7 @@ class RJhove
     
         # create the parser
         DescribeLogger.instance.info "validator: #{validator.class} method: #{validator.method}" 
-        require "format/"+ validator.class.downcase
+        require "lib/format/"+ validator.class.downcase
         parser = eval(validator.class).new validator.parameter
 
 		# set the presume format since we already determine the file foramt prior to validation. 
@@ -71,7 +71,7 @@ class RJhove
       validators.each do |vdr|
         DescribeLogger.instance.info "validator: #{vdr.class}, method: #{vdr.method}, parameter: #{vdr.parameter}"
         # create the parser
-        require "format/"+ vdr.class.downcase
+        require "lib/format/"+ vdr.class.downcase
         parser = eval(vdr.class).new vdr.parameter
 
         # set the presume format if we can already determine the file foramt prior to validation. 
